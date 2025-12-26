@@ -1,0 +1,6 @@
+/* Geral */
+@import url("./components/geral.css");
+@import url("./components/header.css");
+@import url("./components/todo-form.css");
+@import url("./components/todo-toolbar.css");
+@import url("./components/todo-list.css");
