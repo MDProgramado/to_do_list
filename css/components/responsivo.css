@@ -1,0 +1,10 @@
+@media (max-width: 400px) {
+    #toolbar {
+        flex-direction: column; 
+        gap: 1rem;
+    }
+    
+    #search, #filter {
+        width: 100%;
+    }
+}

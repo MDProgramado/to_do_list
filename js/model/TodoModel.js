@@ -1,29 +1,45 @@
 export class TodoModel {
-    constructor(){
-        this.todos = [];
+    constructor() {
+       
+        const savedTodos = localStorage.getItem('todos');
+        this.todos = savedTodos ? JSON.parse(savedTodos) : [];
     }
 
-    addTodo(text){
+    _commit(todos) {
+        this.todos = todos;
+        localStorage.setItem('todos', JSON.stringify(this.todos));
+    }
+
+    addTodo(text) {
         const todo = {
             id: Date.now(),
             text: text,
             done: false
         };
-        this.todos.push(todo);
+       
+        this._commit([...this.todos, todo]);
         return todo;
     }
 
-    removeTodo(id){
-        this.todos = this.todos.filter(todo => todo.id !== id);
+    removeTodo(id) {
+       
+        const newTodos = this.todos.filter(todo => todo.id !== id);
+        this._commit(newTodos);
     }
-    toggleDone(id){
-        this.todos = this.todos.map(todo =>
-            todo.id === id ? {...todo, done: !todo.done} : todo
+
+    toggleDone(id) {
+       
+        const newTodos = this.todos.map(todo =>
+            todo.id === id ? { ...todo, done: !todo.done } : todo
         );
+        this._commit(newTodos);
     }
-    editTodo(id, newText){
-        this.todos = this.todos.map(todo =>
-            todo.id === id ? { ...todo, text: newText }: todo
-        )
+
+    editTodo(id, newText) {
+        
+        const newTodos = this.todos.map(todo =>
+            todo.id === id ? { ...todo, text: newText } : todo
+        );
+        this._commit(newTodos);
     }
 }

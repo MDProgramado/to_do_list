@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Avançado MVC</title>
     <link rel="stylesheet" href="css/style.css">
-    <title>Todo Avançado</title>
-    <script type="module" src="js/script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script type="module" src="js/app.js" defer></script>
 </head>
 <body>
     <div class="todo-container">
@@ -37,17 +37,18 @@
 
         <div id="toolbar">
             <div id="search">
-                <h4>Pesquisar: </h4>
+                <h4>Pesquisar:</h4>
                 <form>
-                    <input type="text" id="search-input" placeholder="Buscar">
-                    <button id="erase-button">
+                    <input type="text" id="search-input" placeholder="Buscar...">
+                    <button id="erase-button" title="Limpar busca">
                         <i class="fa-solid fa-delete-left"></i>
                     </button>
                 </form>
             </div>
+            
             <div id="filter">
                 <h4>Filtrar:</h4>
-                <select name="filter-select" id="filter-select">
+                <select id="filter-select">
                     <option value="all">Todos</option>
                     <option value="done">Feitos</option>
                     <option value="todo">A fazer</option>

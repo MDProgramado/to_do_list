@@ -1,5 +1,5 @@
-import { TodoController } from "./controller/TodoController";
-import { TodoModel } from "./model/TodoModel";
-import { TodoView } from "./view/TodoView";
+import { TodoController } from "./controller/TodoController.js";
+import { TodoModel } from "./model/TodoModel.js";
+import { TodoView } from "./view/TodoView.js";
 
 const app = new TodoController(new TodoModel(), new TodoView());

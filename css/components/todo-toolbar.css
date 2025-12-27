@@ -2,32 +2,63 @@
     padding: 1rem;
     border-bottom: 1px solid #ccc;
     display: flex;
+    gap: 1.5rem; /* Espaço entre a busca e o filtro */
 }
 
-#toolbar h4{
-    margin-bottom: .5rem;
+#toolbar h4 {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #444;
 }
 
-#search{
-    border-right: 1px solid #ddd;
-    padding-right: 1rem;
-    margin-right: 1rem;
-    width: 65%;
+/* --- Área de Busca --- */
+#search {
+    flex: 2; /* Ocupa 2 partes do espaço (maior que o filtro) */
     display: flex;
     flex-direction: column;
 }
+
 #search form {
     display: flex;
+    gap: 0.5rem; /* Espaço entre input e botão X */
 }
-#search input{
+
+#search input {
     width: 100%;
-    margin-right: 0.3rem;
+    padding: 0.4rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
+
+#search button {
+    /* Ajustes específicos para o botão de apagar */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0 0.8rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#search button:hover {
+    background-color: #f0f0f0;
+    border-color: #bbb;
+}
+
+/* --- Área de Filtro --- */
 #filter {
-    width: 35%;
+    flex: 1; /* Ocupa 1 parte do espaço */
     display: flex;
     flex-direction: column;
 }
-#filter select{
-    flex: 1;
+
+#filter select {
+    padding: 0.4rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    width: 100%;
+    cursor: pointer;
 }
+
+
