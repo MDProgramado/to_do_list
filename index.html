@@ -5,20 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Todo Avançado</title>
-      <script type="module" src="js/script.js" defer></script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <script type="module" src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
     <div class="todo-container">
         <header>
-            <h1>Todo Avancado</h1>
+            <h1>Todo Avançado</h1>
         </header>
 
         <form id="todo-form">
-            <p>
-                Adicione sua tarefa:
-            </p>
+            <p>Adicione sua tarefa:</p>
             <div class="form-control">
                 <input type="text" id="todo-input" placeholder="O que você vai fazer?">
                 <button type="submit">
@@ -26,7 +23,8 @@
                 </button>
             </div>
         </form>
-        <form  id="edit-form" class="">
+
+        <form id="edit-form" class="hide"> 
             <p>Edite sua tarefa:</p>
             <div class="form-control">
                 <input type="text" id="edit-input">
@@ -34,12 +32,13 @@
                     <i class="fa-solid fa-check-double"></i>
                 </button>
             </div>
-            <button id="cancel-edit-btn">Cancelar</button>
+            <button id="cancel-edit-btn" type="button">Cancelar</button>
         </form>
+
         <div id="toolbar">
             <div id="search">
                 <h4>Pesquisar: </h4>
-                <form >
+                <form>
                     <input type="text" id="search-input" placeholder="Buscar">
                     <button id="erase-button">
                         <i class="fa-solid fa-delete-left"></i>
@@ -55,22 +54,9 @@
                 </select>
             </div>
         </div>
-        <div id="todo-list ">
-            <div class="todo">
-                <h3>Estou fazendo alguma coisa</h3>
-                <button class="finish-todo">
-                    <i class="fa-solid fa-check"></i>
-                </button>
-                 <button class="edit-todo">
-                    <i class="fa-solid fa-pen"></i>
-                </button>
-                 <button class="remove-todo">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-        </div>
-    </div>
 
+        <div id="todo-list">
+            </div>
+    </div>
 </body>
-  
 </html>
